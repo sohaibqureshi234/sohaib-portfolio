@@ -30,7 +30,7 @@ PORTFOLIO_DATA = {
         "Mobile": ["Flutter", "Dart", "iOS", "Android", "Cross-Platform"],
         "Architecture": ["Clean Architecture", "MVVM", "Repository Pattern", "Design Patterns"],
         "State Management": ["GetX", "BLoC", "Provider", "Riverpod"],
-        "Backend": ["Python 3", "JavaScript", "Express.js", "REST APIs", "GraphQL", "WebSockets"],
+
         "Firebase": ["Auth", "Firestore", "Cloud Functions", "Push Notifications", "AdMob"],
         "Testing": ["Unit Testing", "Widget Testing", "Integration Testing", "mockito"],
         "DevOps": ["Git", "GitHub Actions", "Fastlane", "CI/CD", "Agile", "Scrum"],
