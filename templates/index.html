@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ data.name }} — {{ data.title }}</title>
-  <meta name="description" content="Portfolio of {{ data.name }}, {{ data.title }} with 4+ years of experience building cross-platform iOS and Android apps." />
+  <meta name="description" content="Portfolio of {{ data.name }}, {{ data.title }} with 4+ years of experience building Flutter applications for iOS, Android, Web, and Android TV." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -24,13 +24,13 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Hire Me</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <ul>
       <li><a href="#about" class="mobile-link">About</a></li>
       <li><a href="#skills" class="mobile-link">Skills</a></li>
@@ -45,7 +45,7 @@
     <div class="hero-bg-grid"></div>
     <div class="container hero-container">
       <div class="hero-content">
-        <p class="hero-eyebrow reveal">&#47;&#47; available for new projects</p>
+        <p class="hero-eyebrow reveal">&#47;&#47; Flutter Web &amp; Mobile</p>
         <h1 class="hero-name reveal delay-1">
           Muhammad<br>
           <span class="accent">Sohaib</span><br>
@@ -68,11 +68,11 @@
         <div class="store-badges">
           <span class="badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            App Store
+            iOS
           </span>
           <span class="badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.25.99.22l.06-.04 11.05-11.05-3.06-3.06L3.18 23.76zm17.43-11.5L17.9 10.7l-3.25 3.24 3.25 3.25 2.73-1.57c.78-.45.78-1.62-.02-2.06zM2.37.43C2.14.68 2 1.06 2 1.56v20.88c0 .5.14.88.38 1.12l.05.04 11.7-11.7v-.26L2.42.38 2.37.43zm12.56 8.94l-3.06 3.06-9.5-9.5c.34-.29.82-.32 1.25-.07l11.31 6.51z"/></svg>
-            Play Store
+            Android · Web · TV
           </span>
         </div>
       </div>
@@ -88,35 +88,21 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">01 / About</span>
-        <h2 class="section-title">Building apps<br>that <span class="accent">actually ship</span></h2>
+        <h2 class="section-title">Engineering products<br>that <span class="accent">ship and scale</span></h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p>I'm a Lead Flutter Developer based in Islamabad with 4+ years of experience turning complex product ideas into polished, performant mobile apps. I've shipped across <strong>healthcare, fintech, AI,</strong> and <strong>consumer</strong> domains — building for real users, not just demos.</p>
-          <p>My work combines strong architectural foundations (Clean Architecture, MVVM) with hands-on attention to UI detail, performance profiling, and CI/CD. I've led teams, defined codebases from scratch, and collaborated across design, backend, and product.</p>
-          <p>Currently also expanding into <span class="accent">Python 3 backend development</span> — having already contributed to a production REST API with Google Cloud OCR integration.</p>
+          {% for paragraph in data.about %}
+          <p>{{ paragraph }}</p>
+          {% endfor %}
         </div>
         <div class="about-details reveal delay-1">
+          {% for detail in data.details %}
           <div class="detail-item">
-            <span class="detail-label">Location</span>
-            <span class="detail-val">Islamabad, Pakistan (Open to Remote)</span>
+            <span class="detail-label">{{ detail.label }}</span>
+            <span class="detail-val">{{ detail.value }}</span>
           </div>
-          <div class="detail-item">
-            <span class="detail-label">Experience</span>
-            <span class="detail-val">4+ Years</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">Education</span>
-            <span class="detail-val">BS Software Engineering, CECOS University (2020)</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">Languages</span>
-            <span class="detail-val">English (Professional) · Urdu (Native)</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">Available for</span>
-            <span class="detail-val">Full-time · Contract · Freelance</span>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -180,20 +166,27 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">04 / Projects</span>
-        <h2 class="section-title">Live Apps on <span class="accent">Both Stores</span></h2>
+        <h2 class="section-title">Selected <span class="accent">Production Work</span></h2>
       </div>
       <div class="projects-grid">
         {% for project in data.projects %}
         <div class="project-card reveal" style="--card-accent: {{ project.color }}">
           <div class="project-top">
-            <span class="project-domain">{{ project.domain }}</span>
+            <div>
+              <span class="project-domain">{{ project.domain }}</span>
+              <span class="project-platforms">{{ project.platforms }}</span>
+            </div>
             <div class="project-links">
+              {% if project.appstore %}
               <a href="{{ project.appstore }}" target="_blank" rel="noopener" title="App Store" class="store-link">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
               </a>
+              {% endif %}
+              {% if project.playstore %}
               <a href="{{ project.playstore }}" target="_blank" rel="noopener" title="Play Store" class="store-link">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.25.99.22l.06-.04 11.05-11.05-3.06-3.06L3.18 23.76zm17.43-11.5L17.9 10.7l-3.25 3.24 3.25 3.25 2.73-1.57c.78-.45.78-1.62-.02-2.06zM2.37.43C2.14.68 2 1.06 2 1.56v20.88c0 .5.14.88.38 1.12l.05.04 11.7-11.7v-.26L2.42.38 2.37.43zm12.56 8.94l-3.06 3.06-9.5-9.5c.34-.29.82-.32 1.25-.07l11.31 6.51z"/></svg>
               </a>
+              {% endif %}
             </div>
           </div>
           <h3 class="project-name">{{ project.name }}</h3>
@@ -215,7 +208,7 @@
       <div class="contact-wrapper reveal">
         <span class="section-tag">05 / Contact</span>
         <h2 class="contact-title">Let's build something<br><span class="accent">together.</span></h2>
-        <p class="contact-desc">I'm currently open to new opportunities — full-time, contract, or freelance. Whether you have a project in mind or just want to connect, my inbox is always open.</p>
+        <p class="contact-desc">Need a senior Flutter engineer for mobile, web, native integrations, or AI-powered product work? Let's talk.</p>
         <div class="contact-links">
           <a href="mailto:{{ data.email }}" class="btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -225,6 +218,7 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
+          <a href="{{ data.github }}" target="_blank" rel="noopener" class="btn-ghost">GitHub</a>
         </div>
       </div>
     </div>
@@ -234,7 +228,7 @@
   <footer>
     <div class="container footer-inner">
       <p class="footer-copy">© 2026 Muhammad Sohaib Qureshi. Built with Flask &amp; deployed on Vercel.</p>
-      <p class="footer-mono">Flutter · Python · Clean Architecture</p>
+      <p class="footer-mono">Flutter · Dart · Clean Architecture · AI/OCR</p>
     </div>
   </footer>
 
