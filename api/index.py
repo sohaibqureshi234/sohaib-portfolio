@@ -17,6 +17,7 @@ PORTFOLIO_DATA = {
     "location": "Islamabad, Pakistan",
     "email": "sohaibqureshi1997@gmail.com",
     "phone": "+92 308 887 9105",
+    "whatsapp": "https://wa.me/923088879105?text=Hi%20Sohaib%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect.",
     "linkedin": "https://linkedin.com/in/sohaibqureshi234",
     "github": "https://github.com/sohaibqureshi234",
     "website": "https://sohaib-portfolio-topaz.vercel.app/",
