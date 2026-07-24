@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ data.name }} — {{ data.title }}</title>
-  <meta name="description" content="Portfolio of {{ data.name }}, {{ data.title }} with 4+ years of experience building Flutter applications for iOS, Android, Web, and Android TV." />
+  <meta name="description" content="Portfolio of {{ data.name }}, {{ data.title }} building Flutter mobile/web products and auditable AI/LLM integrations, with supporting backend collaboration." />
   <meta name="theme-color" content="#030508" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{{ data.name }} — {{ data.title }}" />
@@ -68,7 +68,7 @@
     <div class="hero-bg-grid"></div>
     <div class="container hero-container">
       <div class="hero-content">
-        <p class="hero-eyebrow reveal">&#47;&#47; Senior Flutter Developer</p>
+        <p class="hero-eyebrow reveal">&#47;&#47; {{ data.title }}</p>
         <h1 class="hero-name reveal delay-1">
           Muhammad <span class="accent">Sohaib</span><br>
           Qureshi
@@ -88,7 +88,7 @@
         <figure class="portrait-card">
           <img
             src="{{ url_for('static', filename='images/muhammad-sohaib-qureshi.jpg') }}"
-            alt="Muhammad Sohaib Qureshi, Senior Flutter Developer"
+            alt="Muhammad Sohaib Qureshi, Senior Flutter and AI Engineer"
             class="portrait-image"
             width="1024"
             height="1024"
@@ -98,7 +98,7 @@
           />
           <figcaption class="portrait-caption">
             <span class="portrait-kicker">Production-focused engineer</span>
-            <span class="portrait-role">Flutter · Native · AI integrations</span>
+            <span class="portrait-role">Flutter · AI/LLM integrations · Backend collaboration</span>
           </figcaption>
         </figure>
         <div class="hero-stats">
@@ -211,7 +211,7 @@
       <div class="section-header reveal">
         <span class="section-tag">04 / Projects</span>
         <h2 class="section-title">Selected <span class="accent">Production Work</span></h2>
-        <p class="section-intro">Seven shipped applications and selected device work across healthcare, fintech, logistics, rewards, advertising, and connected products.</p>
+        <p class="section-intro">Seven shipped applications plus an autonomous fleet-intelligence platform across healthcare, fintech, logistics, rewards, advertising, AI, and connected products.</p>
       </div>
       <div class="projects-grid">
         {% for project in data.projects %}
@@ -220,6 +220,9 @@
           <div class="project-top">
             <div>
               <span class="project-domain">{{ project.domain }}</span>
+              {% if project.associated_with %}
+              <span class="project-company">Associated with {{ project.associated_with }}</span>
+              {% endif %}
               <span class="project-platforms">{{ project.platforms }}</span>
             </div>
             <div class="project-links">
@@ -254,7 +257,7 @@
       <div class="contact-wrapper reveal">
         <span class="section-tag">05 / Contact</span>
         <h2 class="contact-title">Let's build something<br><span class="accent">together.</span></h2>
-        <p class="contact-desc">Need a senior Flutter engineer for mobile, web, native integrations, or AI-powered product work? Email me or start a WhatsApp conversation.</p>
+        <p class="contact-desc">Need a senior Flutter engineer for mobile/web, native integrations, or production-minded AI/LLM features—with enough backend depth to collaborate end to end? Email me or start a WhatsApp conversation.</p>
         <div class="contact-links">
           <a href="mailto:{{ data.email }}" class="btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -277,7 +280,7 @@
       <p class="footer-copy">© 2026 Muhammad Sohaib Qureshi. Built with Flask &amp; deployed on Vercel.</p>
       <div class="footer-meta">
         <a href="{{ data.website }}" class="footer-site">sohaib-portfolio-topaz.vercel.app</a>
-        <p class="footer-mono">Flutter · Dart · Clean Architecture · AI/OCR</p>
+        <p class="footer-mono">Flutter · Dart · Clean Architecture · AI/LLM · Redis · Docker</p>
       </div>
     </div>
   </footer>

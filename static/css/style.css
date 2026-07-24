@@ -783,6 +783,7 @@ nav.scrolled { padding: 1rem 3rem; background: rgba(3, 5, 8, 0.85); }
 }
 
 .project-domain,
+.project-company,
 .project-platforms {
   display: block;
   font-family: 'DM Mono', monospace;
@@ -800,6 +801,15 @@ nav.scrolled { padding: 1rem 3rem; background: rgba(3, 5, 8, 0.85); }
   margin-top: 0.4rem;
   color: var(--muted);
   font-size: 11px;
+}
+
+.project-company {
+  margin-top: 0.45rem;
+  color: var(--text);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.72;
 }
 
 .project-links {
